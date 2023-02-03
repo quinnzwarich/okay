@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class looker : MonoBehaviour
+public class spinning : MonoBehaviour
 {
-    public GameObject target;
+    public float rotationSpeed = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +18,10 @@ public class looker : MonoBehaviour
         
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
-        this.GetComponent<Transform>().LookAt(target.transform);
-        this.transform.Translate(new Vector3(0, 0, 0.01f), Space.Self);
+
+        this.GetComponent<Transform>().Rotate(0.1f, rotationSpeed, 0.2f);
+
     }
 }
