@@ -10,12 +10,12 @@ public class pickUpUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player.count = 0;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         this.GetComponent<TextMeshProUGUI>().text = "pickup count: " + player.count; 
     }
 }

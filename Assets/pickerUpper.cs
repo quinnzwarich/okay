@@ -28,7 +28,7 @@ public class pickerUpper : MonoBehaviour
 
             Debug.Log("pickup count: " + count);
 
-            this.GetComponent<AudioSource>().Play();
+            // this.GetComponent<AudioSource>().Play();
         }
     }
 }
