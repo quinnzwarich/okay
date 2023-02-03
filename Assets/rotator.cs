@@ -8,8 +8,7 @@ public class rotator : MonoBehaviour
 
     public float rotationSpeed = 0.3f;
 
-    private bool rotate;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +18,13 @@ public class rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.R)) 
-        {
-            rotate = true;
-        }
-        else 
-        {
-            rotate = false;
-        }
+       
     }
 
     private void FixedUpdate()
     {
-        if (rotate)
-        {
-            this.GetComponent<Transform>().Rotate(0.3f, rotationSpeed, 0.2f);
-        }
+        
+        this.GetComponent<Transform>().Rotate(0f, rotationSpeed, 0f);
+        
     }
 }
