@@ -6,9 +6,14 @@ public class rotator : MonoBehaviour
 
 {
 
-    public float rotationSpeed = 0.3f;
+    // public variables can be accessed across different scripts 
 
-   
+    public float rotationSpeed = 1f;
+
+    // public pickerUpper player;
+
+    public float xCoord = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +28,13 @@ public class rotator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        this.GetComponent<Transform>().Rotate(0f, rotationSpeed, 0f);
+        xCoord = GameObject.FindGameObjectWithTag("Player").transform.position.x;
+
+        //xCoord = xCoord / 100f;
+
+        //rotationSpeed = rotationSpeed * xCoord;
+
+        this.GetComponent<Transform>().Rotate(0f, rotationSpeed * xCoord, 0f);
         
     }
 }
